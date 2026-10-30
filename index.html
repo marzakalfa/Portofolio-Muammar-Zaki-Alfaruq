@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nama Kamu | Portofolio</title>
-  <meta name="description" content="Portofolio mahasiswa Informatika: proyek, kemampuan, dan pencapaian." />
+  <title>Muammar Zaki Alfaruq | Portofolio</title>
+  <meta name="description" content="Portofolio Muammar Zaki Alfaruq — Mahasiswa Teknik Informatika UNESA, Graphic Designer, Photographer, Video Editor, dan Problem Solver." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -101,7 +101,7 @@
       font-size: clamp(6rem, 22vw, 18rem); font-weight: 800; letter-spacing: -.05em; white-space: nowrap;
       color: transparent; -webkit-text-stroke: 1.5px var(--border); user-select: none; pointer-events: none;
     }
-    .hero-inner { position: relative; text-align: center; z-index: 1; width: 100%; max-width: 700px; }
+    .hero-inner { position: relative; text-align: center; z-index: 1; width: 100%; max-width: 720px; }
     .hero-tag { color: var(--muted); font-size: 1rem; margin-bottom: 8px; }
     .hero-name { font-size: clamp(2rem, 6vw, 3.4rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.1; }
     .hero-actions { margin: 24px 0 36px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
@@ -124,19 +124,20 @@
     }
     .gallery::-webkit-scrollbar { display: none; }
     .work-card {
-      flex: 0 0 min(340px, 80vw); scroll-snap-align: start;
+      flex: 0 0 min(380px, 85vw); scroll-snap-align: start;
       background: var(--surface); border: 1px solid var(--border); border-radius: 22px;
       overflow: hidden; transition: transform .25s, box-shadow .25s;
+      display: flex; flex-direction: column;
     }
     .work-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
     .work-thumb {
       aspect-ratio: 16/10; background: linear-gradient(135deg, var(--surface-2), var(--bg));
       display: grid; place-items: center; font-size: 2.6rem; border-bottom: 1px solid var(--border); overflow: hidden;
     }
-    .work-thumb img { width: 100%; height: 100%; object-fit: cover; }
-    .work-body { padding: 20px; }
+    .work-thumb img, .work-thumb iframe { width: 100%; height: 100%; object-fit: cover; border: 0; }
+    .work-body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
     .work-body h3 { font-size: 1.1rem; margin-bottom: 6px; }
-    .work-body p { color: var(--muted); font-size: .88rem; margin-bottom: 14px; }
+    .work-body p { color: var(--muted); font-size: .88rem; margin-bottom: 14px; flex: 1; }
     .chips { display: flex; flex-wrap: wrap; gap: 6px; }
     .chip {
       font-size: .7rem; padding: 4px 10px; border-radius: 6px;
@@ -146,14 +147,18 @@
     .work-link { display: inline-block; margin-top: 14px; font-size: .82rem; font-weight: 600; color: var(--accent); }
     .gal-controls { display: flex; gap: 10px; margin-top: 8px; }
 
-    /* ---------- WHAT I CAN DO ---------- */
+    /* ---------- WHAT I CAN DO (LOGO GRID) ---------- */
     .skills-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; }
-    .tool-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 28px; max-width: 240px; }
-    .tool {
-      aspect-ratio: 1; display: grid; place-items: center; border-radius: 14px;
-      background: var(--surface); border: 1px solid var(--border);
-      font-size: .68rem; font-weight: 700; color: var(--muted); text-align: center; padding: 4px;
+    .tool-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; max-width: 300px; }
+    .tool-item {
+      aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 6px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border);
+      padding: 10px; transition: transform .2s;
     }
+    .tool-item:hover { transform: translateY(-3px); }
+    .tool-item img { width: 36px; height: 36px; object-fit: contain; }
+    .tool-item span { font-size: .65rem; font-weight: 700; color: var(--muted); text-align: center; }
+
     .skill-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .skill-card { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 26px; }
     .skill-card .num { font-size: 2.4rem; font-weight: 300; }
@@ -166,8 +171,8 @@
     .avatar { width: 96px; height: 96px; border-radius: 50%; overflow: hidden; background: var(--surface-2); border: 1px solid var(--border); display: grid; place-items: center; font-weight: 800; font-size: 1.6rem; color: var(--muted); }
     .avatar img { width: 100%; height: 100%; object-fit: cover; }
     .id-list { margin: 8px 0 18px; display: grid; gap: 4px; font-size: .92rem; }
-    .id-list span { color: var(--muted); display: inline-block; min-width: 70px; }
-    .stats { display: flex; gap: 36px; margin: 20px 0; }
+    .id-list span { color: var(--muted); display: inline-block; min-width: 90px; }
+    .stats { display: flex; gap: 36px; margin: 20px 0; flex-wrap: wrap; }
     .stat b { display: block; font-size: 1.9rem; font-weight: 800; line-height: 1; }
     .stat small { color: var(--muted); font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; }
     .about-desc { color: var(--muted); max-width: 640px; }
@@ -180,10 +185,10 @@
     /* ---------- ACHIEVEMENT ---------- */
     .timeline { margin-top: 40px; display: grid; gap: 16px; }
     .ach {
-      display: grid; grid-template-columns: 90px 1fr auto; gap: 20px; align-items: start;
+      display: grid; grid-template-columns: 110px 1fr auto; gap: 20px; align-items: start;
       background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 22px;
     }
-    .ach .year { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+    .ach .year { font-size: 1.35rem; font-weight: 800; color: var(--accent); }
     .ach h3 { font-size: 1.05rem; }
     .ach .org { color: var(--muted); font-size: .82rem; margin-bottom: 6px; }
     .ach p { color: var(--muted); font-size: .88rem; }
@@ -200,7 +205,7 @@
       transition: transform .2s;
     }
     .contact-item:hover { transform: translateX(4px); }
-    .contact-item .ci { width: 38px; height: 38px; border-radius: 10px; background: var(--surface-2); display: grid; place-items: center; font-size: .75rem; font-weight: 700; }
+    .contact-item .ci { width: 38px; height: 38px; border-radius: 10px; background: var(--surface-2); display: grid; place-items: center; font-size: .75rem; font-weight: 700; flex-shrink: 0; }
     .contact-item small { display: block; color: var(--muted); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; }
     .contact-item span { font-weight: 600; font-size: .9rem; word-break: break-all; }
     .btn.wide { justify-content: center; width: 100%; padding: 16px; }
@@ -233,7 +238,7 @@
     <nav class="nav" id="nav">
       <a href="#hero" class="brand">
         <span class="logo">M</span>
-        <span>Marzak Alfa</span> <!-- GANTI: nama singkat -->
+        <span>Marzak</span>
       </a>
       <div class="nav-links">
         <a href="#work">Work</a>
@@ -249,79 +254,74 @@
 
   <!-- ===================== HERO ===================== -->
   <section id="hero">
-    <div class="hero-bg-text">MARZAK</div> <!-- GANTI: nama besar di latar -->
+    <div class="hero-bg-text">MARZAK</div>
     <div class="hero-inner">
       <p class="hero-tag">Halo, saya</p>
-      <h1 class="hero-name">Muammar Zaki Alfaruq</h1> <!-- GANTI -->
-      <p class="hero-tag">Mahasiswa Teknik Informatika &middot; Design Grapher &middot; Problem Solver</p> <!-- GANTI -->
+      <h1 class="hero-name">Muammar Zaki Alfaruq</h1>
+      <p class="hero-tag">Mahasiswa Teknik Informatika &middot; Graphic Designer &middot; Photographer &amp; Video Editor</p>
       <div class="hero-actions">
         <a href="#work" class="btn">Lihat Karya</a>
         <a href="#contact" class="btn ghost">Hubungi Saya</a>
       </div>
       <div class="photo-frame">
-        <!-- GANTI: taruh foto di folder yang sama dengan nama foto.jpg -->
-        <img src="foto.jpg" alt="Foto profil" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
-        <span class="photo-fallback" style="display:none">NK</span>
+        <!-- Taruh foto di folder yang sama dengan nama foto.jpg -->
+        <img src="foto.jpg" alt="Foto profil Muammar Zaki Alfaruq" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+        <span class="photo-fallback" style="display:none">MZ</span>
       </div>
     </div>
   </section>
 
-  <!-- ===================== WORK GALLERY ===================== -->
+  <!-- ===================== WORK GALLERY (2 KATEGORI) ===================== -->
   <section id="work">
     <div class="container reveal">
       <div class="work-head">
         <div>
           <p class="eyebrow">Selected Work</p>
           <h2 class="title">Work Gallery</h2>
-          <p class="lead">Kumpulan proyek, sistem, dan karya digital yang pernah saya buat.</p>
+          <p class="lead">Kumpulan karya pilihan selama masa pengabdian organisasi dan proyek produksi video pribadi.</p>
         </div>
-        <a href="https://github.com/USERNAME" target="_blank" rel="noopener" class="btn ghost">Lihat Proyek Lainnya ↗</a>
       </div>
 
       <div class="gallery-wrap">
         <div class="gallery" id="gallery">
 
-          <!-- Salin blok <article> ini untuk menambah proyek -->
+          <!-- Kategori 1: Karya MPK-OSIS (Desain & Fotografi) -->
           <article class="work-card">
             <div class="work-thumb">
-              <!-- GANTI emoji dengan <img src="proyek1.jpg" alt="..."> jika punya screenshot -->
-              🌐
+              <img src="preview.png" alt="Preview Karya MPK-OSIS" onerror="this.style.display='none'; this.parentNode.textContent='🎨'" />
             </div>
             <div class="work-body">
-              <h3>Judul Proyek 1</h3>
-              <p>Deskripsi singkat proyek: apa yang dibuat, untuk siapa, dan masalah apa yang diselesaikan.</p>
-              <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
-              <a href="#" class="work-link" target="_blank" rel="noopener">Lihat proyek →</a>
-            </div>
-          </article>
-
-          <article class="work-card">
-            <div class="work-thumb">📱</div>
-            <div class="work-body">
-              <h3>Judul Proyek 2</h3>
-              <p>Deskripsi singkat proyek kedua kamu. Jelaskan peran dan hasil akhirnya.</p>
-              <div class="chips"><span class="chip">Python</span><span class="chip">MySQL</span></div>
-              <a href="#" class="work-link" target="_blank" rel="noopener">Lihat proyek →</a>
+              <h3>Karya &amp; Dokumentasi MPK-OSIS</h3>
+              <p>Mencakup struktur feeds Instagram @mpkosisnr, desain poster/banner (NuraFest, PEMIRA, LDK), serta dokumentasi fotografi dan video dari 14 acara kepengurusan 2023–2025.</p>
+              <div class="chips">
+                <span class="chip">Desain Grafis</span>
+                <span class="chip">Fotografi</span>
+                <span class="chip">Video Editing</span>
+              </div>
+              <a href="Portofolio Marzak.pdf" class="work-link" download>Download Portofolio PDF →</a>
             </div>
           </article>
 
+          <!-- Kategori 2: Karya Pribadi (Short Movie) -->
           <article class="work-card">
-            <div class="work-thumb">📊</div>
-            <div class="work-body">
-              <h3>Judul Proyek 3</h3>
-              <p>Deskripsi singkat proyek ketiga. Bisa tugas kuliah, proyek kelompok, atau proyek pribadi.</p>
-              <div class="chips"><span class="chip">PHP</span><span class="chip">Laravel</span></div>
-              <a href="#" class="work-link" target="_blank" rel="noopener">Lihat proyek →</a>
+            <div class="work-thumb">
+              <iframe
+                src="https://www.youtube.com/embed/5nsjpjyiWrg"
+                title="Hidup Atau Mati (Short Movie) - Marzak"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
             </div>
-          </article>
-
-          <article class="work-card">
-            <div class="work-thumb">🎨</div>
             <div class="work-body">
-              <h3>Judul Proyek 4</h3>
-              <p>Deskripsi singkat proyek keempat, misalnya desain UI/UX di Figma.</p>
-              <div class="chips"><span class="chip">Figma</span><span class="chip">UI/UX</span></div>
-              <a href="#" class="work-link" target="_blank" rel="noopener">Lihat proyek →</a>
+              <h3>Karya Pribadi: Short Movie ("Hidup Atau Mati")</h3>
+              <p>Proyek film pendek bertema negosiasi untuk tugas sekolah. Bertanggung jawab penuh sebagai videografer dan video editor hingga publikasi.</p>
+              <div class="chips">
+                <span class="chip">Videography</span>
+                <span class="chip">Video Editing</span>
+                <span class="chip">Short Movie</span>
+              </div>
+              <a href="https://youtu.be/5nsjpjyiWrg" class="work-link" target="_blank" rel="noopener">Tonton di YouTube →</a>
             </div>
           </article>
 
@@ -334,42 +334,70 @@
     </div>
   </section>
 
-  <!-- ===================== WHAT I CAN DO ===================== -->
+  <!-- ===================== WHAT I CAN DO (LOGO TOOLS) ===================== -->
   <section id="skills">
     <div class="container reveal">
       <div class="skills-layout">
         <div>
           <p class="eyebrow">My Capabilities</p>
           <h2 class="title">What I Can Do</h2>
-          <p class="lead">Saya menggabungkan kemampuan teknis dan pemecahan masalah untuk membangun solusi digital yang berguna.</p> <!-- GANTI -->
-          <!-- Daftar tools: ubah teks sesuai tools yang kamu kuasai -->
+          <p class="lead">Menggabungkan logika matematika, pemecahan masalah, dan perangkat kreatif pilihan untuk hasil yang optimal.</p>
+          
+          <!-- Grid Logo Tools -->
           <div class="tool-grid">
-            <div class="tool">HTML</div><div class="tool">CSS</div><div class="tool">JS</div>
-            <div class="tool">Python</div><div class="tool">PHP</div><div class="tool">MySQL</div>
-            <div class="tool">Git</div><div class="tool">GitHub</div><div class="tool">VS Code</div>
+            <div class="tool-item">
+              <img src="canva.png" alt="Canva" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+              <span style="display:none">Canva</span>
+              <span>Canva</span>
+            </div>
+            <div class="tool-item">
+              <img src="ibispaint.png" alt="Ibis Paint X" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+              <span style="display:none">Ibis Paint</span>
+              <span>Ibis Paint X</span>
+            </div>
+            <div class="tool-item">
+              <img src="capcut.png" alt="CapCut" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+              <span style="display:none">CapCut</span>
+              <span>CapCut</span>
+            </div>
+            <div class="tool-item">
+              <img src="picsart.png" alt="Picsart" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+              <span style="display:none">Picsart</span>
+              <span>Picsart</span>
+            </div>
+            <div class="tool-item">
+              <img src="vscode.png" alt="VS Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+              <span style="display:none">VS Code</span>
+              <span>VS Code</span>
+            </div>
           </div>
         </div>
 
         <div class="skill-cards">
           <div class="skill-card">
-            <span class="cat">Web<br>Development</span>
+            <span class="cat">Visual &amp;<br>Multimedia</span>
             <div class="num">01</div>
-            <div class="ico">&lt;/&gt;</div>
-            <p>Membangun website yang responsif dan mudah digunakan, dari tampilan (front-end) sampai pengelolaan data.</p> <!-- GANTI -->
+            <div class="ico">✦</div>
+            <p>Merancang identitas visual publikasi media sosial, ilustrasi digital/manual, fotografi acara secara adaptif, hingga produksi dan penyuntingan video.</p>
             <div class="chips">
-              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
-              <span class="chip">Responsive Design</span><span class="chip">Git</span>
+              <span class="chip">Desain Grafis</span>
+              <span class="chip">Fotografi</span>
+              <span class="chip">Video Editing</span>
+              <span class="chip">Ilustrasi Digital/Manual</span>
             </div>
           </div>
 
           <div class="skill-card">
-            <span class="cat">Problem<br>Solving</span>
+            <span class="cat">Logic &amp;<br>Problem Solving</span>
             <div class="num">02</div>
-            <div class="ico">⚙</div>
-            <p>Menganalisis masalah, menyusun algoritma, dan menguji hasil kerja agar berjalan dengan benar.</p> <!-- GANTI -->
+            <div class="ico">&lt;/&gt;</div>
+            <p>Menerapkan pemikiran analitis, logika matematika, dan algoritma pemrograman untuk memecahkan masalah secara sistematis, teliti, dan kolaboratif.</p>
             <div class="chips">
-              <span class="chip">Algoritma</span><span class="chip">Debugging</span>
-              <span class="chip">Analisis Sistem</span><span class="chip">Teamwork</span>
+              <span class="chip">Logika Matematika</span>
+              <span class="chip">Algoritma</span>
+              <span class="chip">Analytical Thinking</span>
+              <span class="chip">Problem Solving</span>
+              <span class="chip">Kolaborasi Tim</span>
             </div>
           </div>
         </div>
@@ -381,50 +409,52 @@
   <section id="about">
     <div class="container reveal">
       <p class="eyebrow">About Me</p>
-      <h2 class="title">Mahasiswa yang suka membangun hal baru.</h2> <!-- GANTI: headline -->
+      <h2 class="title">Memadukan logika informatika dan eksekusi kreatif.</h2>
 
       <div class="about-grid">
         <div class="avatar">
-          <img src="foto.jpg" alt="Foto profil" onerror="this.style.display='none'; this.parentNode.textContent='NK'" />
+          <img src="foto.jpg" alt="Foto profil Muammar Zaki Alfaruq" onerror="this.style.display='none'; this.parentNode.textContent='MZ'" />
         </div>
         <div>
-          <h3>Nama Lengkap Kamu</h3>
+          <h3>Muammar Zaki Alfaruq</h3>
           <div class="id-list">
-            <div><span>Nama</span>: Nama Lengkap Kamu</div> <!-- GANTI -->
-            <div><span>NIM</span>: 1234567890</div>           <!-- GANTI -->
-            <div><span>Prodi</span>: Informatika</div>        <!-- GANTI -->
+            <div><span>Nama</span>: Muammar Zaki Alfaruq</div>
+            <div><span>Panggilan</span>: Zaki / Marzak</div>
+            <div><span>Prodi</span>: S1 Teknik Informatika — Universitas Negeri Surabaya</div>
+            <div><span>Domisili</span>: Surabaya, Jawa Timur</div>
           </div>
 
           <div class="stats">
-            <div class="stat"><b>5+</b><small>Projects</small></div>        <!-- GANTI -->
-            <div class="stat"><b>3</b><small>Certificates</small></div>     <!-- GANTI -->
-            <div class="stat"><b>2029</b><small>Target Lulus</small></div>  <!-- GANTI -->
+            <div class="stat"><b>14+</b><small>Acara Terdokumentasi</small></div>
+            <div class="stat"><b>3 Thn</b><small>Pengalaman Media</small></div>
+            <div class="stat"><b>4</b><small>Prestasi Matematika</small></div>
           </div>
 
           <p class="about-desc">
-            Saya mahasiswa Informatika yang tertarik pada pengembangan web dan teknologi digital.
-            Saya senang mengubah ide menjadi solusi nyata, terus belajar, dan aktif mengembangkan
-            kemampuan lewat proyek serta kegiatan kampus.
-          </p> <!-- GANTI: deskripsi dirimu -->
-          <p style="margin-top:14px"><a href="cv.pdf" class="work-link" download>Unduh CV saya →</a></p>
+            Mahasiswa Teknik Informatika UNESA yang tertarik pada pemrograman, matematika, dan dunia kreatif.
+            Berpengalaman 3 tahun mengelola dokumentasi acara serta desain publikasi organisasi dengan pendekatan kerja yang adaptif, teliti, dan terstruktur.
+          </p>
+          <p style="margin-top:14px">
+            <a href="Resume Marzak.jpg" class="work-link" download>Download My Resume →</a>
+          </p>
         </div>
       </div>
 
       <div class="about-cols">
         <div class="mini">
-          <small>Pendidikan</small>
-          <h4>Nama Universitas</h4>                    <!-- GANTI -->
-          <p>S1 Informatika &middot; 2025 – sekarang</p> <!-- GANTI -->
+          <small>Pendidikan Tinggi</small>
+          <h4>Universitas Negeri Surabaya</h4>
+          <p>S1 Teknik Informatika &middot; 2026 – Sekarang (Surabaya, Jawa Timur)</p>
         </div>
         <div class="mini">
-          <small>Pengalaman</small>
-          <h4>Organisasi / Magang / Proyek</h4>        <!-- GANTI -->
-          <p>Peran kamu dan tahunnya.</p>              <!-- GANTI -->
+          <small>Pendidikan Menengah</small>
+          <h4>SMAS IT Pesantren Nururrahman</h4>
+          <p>Jurusan IPA &middot; 2023 – 2026 (Depok, Jawa Barat)</p>
         </div>
         <div class="mini">
-          <small>Aktivitas Saat Ini</small>
-          <h4>Building &amp; Learning</h4>             <!-- GANTI -->
-          <p>Membangun proyek web &middot; Belajar full-stack.</p> <!-- GANTI -->
+          <small>Pengalaman Organisasi (2023 – 2026)</small>
+          <h4>MPK-OSIS SMAS IT Nururrahman</h4>
+          <p>Ketua Divisi Humas &amp; Multimedia, Sekretaris Dept. Kominfo, dan Anggota Aktif Divisi PDD.</p>
         </div>
       </div>
     </div>
@@ -435,72 +465,83 @@
     <div class="container reveal">
       <p class="eyebrow">Milestones</p>
       <h2 class="title">Achievement</h2>
-      <p class="lead">Pencapaian yang menunjukkan kemampuan, pengalaman, dan perkembangan diri.</p>
+      <p class="lead">Rekam jejak prestasi di bidang logika dan kompetisi matematika tingkat kota, provinsi, hingga nasional.</p>
 
       <div class="timeline">
-        <!-- Salin blok .ach untuk menambah pencapaian -->
         <div class="ach">
-          <div class="year">2026</div> <!-- GANTI: tahun -->
+          <div class="year">2026</div>
           <div>
-            <h3>Nama Pencapaian / Lomba / Sertifikat</h3>
-            <div class="org">Penyelenggara / Lembaga</div>
-            <p>Deskripsi singkat: apa yang dicapai dan apa yang kamu pelajari.</p>
+            <h3>Peraih Medali Perak Bidang Matematika</h3>
+            <div class="org">Olimpiade Sains Nasional Nusantara (OSKANTARA)</div>
+            <p>Meraih medali perak tingkat nasional pada cabang kompetisi logika dan pemecahan masalah matematika.</p>
           </div>
-          <a href="#" class="proof" target="_blank" rel="noopener">Lihat bukti ↗</a> <!-- GANTI: link bukti/dokumentasi -->
+          <a href="#contact" class="proof">Terverifikasi di Resume ↗</a>
         </div>
 
         <div class="ach">
-          <div class="year">2025</div>
+          <div class="year">2026</div>
           <div>
-            <h3>Pencapaian Kedua</h3>
-            <div class="org">Penyelenggara / Lembaga</div>
-            <p>Deskripsi singkat pencapaian kedua.</p>
+            <h3>Peraih Medali Perunggu Bidang Matematika</h3>
+            <div class="org">Olimpiade Nasional Sains dan Bahasa (ONSB)</div>
+            <p>Meraih medali perunggu pada kompetisi matematika tingkat nasional.</p>
           </div>
-          <a href="#" class="proof" target="_blank" rel="noopener">Lihat bukti ↗</a>
+          <a href="#contact" class="proof">Terverifikasi di Resume ↗</a>
         </div>
 
         <div class="ach">
-          <div class="year">2025</div>
+          <div class="year">2024/2025</div>
           <div>
-            <h3>Pencapaian Ketiga</h3>
-            <div class="org">Penyelenggara / Lembaga</div>
-            <p>Deskripsi singkat pencapaian ketiga.</p>
+            <h3>Peserta Tingkat Provinsi</h3>
+            <div class="org">Kompetisi Matematika Nalaria Realistik (KMNR) Ke-19</div>
+            <p>Mewakili sekolah hingga tahap provinsi dengan fokus pada penalaran matematika realistik dan analitis.</p>
           </div>
-          <a href="#" class="proof" target="_blank" rel="noopener">Lihat bukti ↗</a>
+          <a href="#contact" class="proof">Terverifikasi di Resume ↗</a>
+        </div>
+
+        <div class="ach">
+          <div class="year">2024</div>
+          <div>
+            <h3>Delegasi Sekolah (Tingkat Kota Depok)</h3>
+            <div class="org">Olimpiade Sains Nasional (OSN-K) Bidang Matematika — Puspresnas Kemendikbudristek</div>
+            <p>Terpilih sebagai delegasi resmi sekolah untuk berkompetisi pada seleksi OSN tingkat Kota Depok bidang Matematika.</p>
+          </div>
+          <a href="#contact" class="proof">Terverifikasi di Resume ↗</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== CONTACT ===================== -->
+  <!-- ===================== CONTACT (LET'S WORK TOGETHER) ===================== -->
   <section id="contact">
     <div class="container reveal">
       <div class="contact-grid">
         <div>
           <p class="eyebrow">Get In Touch</p>
           <h2 class="contact-title">LET'S WORK<br>TOGETHER</h2>
-          <p class="lead">Terbuka untuk kolaborasi, magang, dan proyek yang menarik. Ayo ngobrol!</p> <!-- GANTI -->
-          <p style="margin-top:24px"><a href="cv.pdf" class="btn ghost" download>Download Resume →</a></p>
+          <p class="lead">Terbuka untuk kolaborasi kepanitiaan, desain kreatif, dokumentasi multimedia, maupun proyek pengembangan teknologi.</p>
+          <p style="margin-top:24px">
+            <a href="Resume Marzak.jpg" class="btn ghost" download>Download My Resume →</a>
+          </p>
         </div>
 
         <div class="contact-list">
-          <a class="contact-item" href="mailto:emailkamu@gmail.com">
+          <a class="contact-item" href="mailto:muammarzakialfaruq@gmail.com">
             <div class="ci">@</div>
-            <div><small>Email</small><span>emailkamu@gmail.com</span></div> <!-- GANTI -->
+            <div><small>Email</small><span>muammarzakialfaruq@gmail.com</span></div>
           </a>
-          <a class="contact-item" href="https://github.com/USERNAME" target="_blank" rel="noopener">
-            <div class="ci">GH</div>
-            <div><small>GitHub</small><span>github.com/USERNAME</span></div> <!-- GANTI -->
-          </a>
-          <a class="contact-item" href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noopener">
+          <a class="contact-item" href="https://www.linkedin.com/in/marzak-alfa/" target="_blank" rel="noopener">
             <div class="ci">in</div>
-            <div><small>LinkedIn</small><span>linkedin.com/in/USERNAME</span></div> <!-- GANTI -->
+            <div><small>LinkedIn</small><span>linkedin.com/in/marzak-alfa</span></div>
           </a>
-          <a class="btn wide" href="mailto:emailkamu@gmail.com">KIRIM PESAN →</a>
+          <a class="contact-item" href="https://github.com/marzakalfa" target="_blank" rel="noopener">
+            <div class="ci">GH</div>
+            <div><small>GitHub</small><span>github.com/marzakalfa</span></div>
+          </a>
+          <a class="btn wide" href="mailto:muammarzakialfaruq@gmail.com">KIRIM PESAN →</a>
         </div>
       </div>
     </div>
-    <footer>© <span id="year">2026</span> Nama Lengkap Kamu. All rights reserved.</footer>
+    <footer>© <span id="year">2026</span> Muammar Zaki Alfaruq. All rights reserved.</footer>
   </section>
 
   <script>
@@ -527,7 +568,7 @@
 
     // ---------- Galeri: tombol geser ----------
     const gallery = document.getElementById('gallery');
-    const step = () => Math.min(360, gallery.clientWidth * 0.8);
+    const step = () => Math.min(380, gallery.clientWidth * 0.8);
     document.getElementById('prevBtn').addEventListener('click', () => gallery.scrollBy({ left: -step(), behavior: 'smooth' }));
     document.getElementById('nextBtn').addEventListener('click', () => gallery.scrollBy({ left: step(), behavior: 'smooth' }));
 
